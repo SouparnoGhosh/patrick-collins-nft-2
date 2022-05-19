@@ -11,7 +11,7 @@ contract EtherWallet {
         owner = payable(msg.sender);
     }
 
-    function withdraw(uint256 _amount) external payable {
+    function withdraw(uint256 _amount) external {
         require(msg.sender == owner, "Only owner withdraws");
         payable(msg.sender).transfer(_amount);
     }
