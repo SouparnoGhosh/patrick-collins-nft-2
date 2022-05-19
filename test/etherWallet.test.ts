@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { ethers } from "hardhat";
+import { deployments, ethers } from "hardhat";
 // eslint-disable no-unused-vars
 import chai, { expect } from "chai";
 import { deployContract, MockProvider, solidity } from "ethereum-waffle";

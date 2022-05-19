@@ -1,7 +1,6 @@
 /* eslint-disable node/no-unpublished-import */
 import { HardhatRuntimeEnvironment } from "hardhat/types";
 import { DeployFunction } from "hardhat-deploy/dist/types";
-const fs = require("fs");
 
 const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   const { deployments, getNamedAccounts } = hre;
@@ -16,7 +15,6 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
     args: [], // <-- contract constructor arguments. Here it has nothing
     log: true, // <-- log the address and gas used in the console
   });
-  fs.writeFileSync("../README.md", "Hey there!");
 };
 
 export default func;
