@@ -8,12 +8,17 @@ import EtherWalletJSON from "../artifacts/contracts/EtherWallet.sol/EtherWallet.
 chai.use(solidity);
 
 describe("Ether Wallet Contract Tests", async function () {
+  // checks if the wallet address is the owner address
   it("Checks the address", async function () {
     const provider = new MockProvider();
     const [wallet] = provider.getWallets();
     const etherWallet = await deployContract(wallet, EtherWalletJSON, []);
     expect(await etherWallet.owner()).to.equal(wallet.address);
   });
+
+  // checks if the contract can receive eth, display the balance and allow the owner to withdraw from it
+  // I failed to pay it ether using the receive() so I had to create a named function to send it ether.
+  // Everything else worked fine.
 
   it("Checks the balance and withdraw", async function () {
     const provider = new MockProvider();

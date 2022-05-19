@@ -5,9 +5,17 @@
     "strict": true,
     "esModuleInterop": true,
     "outDir": "dist",
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
     "declaration": true,
     "resolveJsonModule": true
   },
-  "include": ["./scripts", "./test", "./typechain"],
+  "include": [
+    "hardhat.config.ts",
+    "./scripts",
+    "./deploy",
+    "./test",
+    "./typechain"
+  ],
   "files": ["./hardhat.config.ts"]
 }
