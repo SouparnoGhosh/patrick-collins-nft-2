@@ -1,5 +1,13 @@
 # Advanced Sample Hardhat Project
 
+---
+
+This is an ether wallet contract made using the [guide](https://solidity-by-example.org/app/ether-wallet) in Solidity by Example.
+
+Done using hardhat, tested with waffle, deployed using hardhat-deploy.
+
+---
+
 This project demonstrates an advanced Hardhat use case, integrating other tools commonly used alongside Hardhat in the ecosystem.
 
 The project comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts. It also comes with a variety of other tools, preconfigured to work with the project code.
