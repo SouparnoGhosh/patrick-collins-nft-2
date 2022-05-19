@@ -13,15 +13,17 @@ describe("Ether Wallet Contract Tests", async function () {
     const [wallet] = provider.getWallets();
     const etherWallet = await deployContract(wallet, EtherWalletJSON, []);
     expect(await etherWallet.owner()).to.equal(wallet.address);
-
-    const contractBalance = await etherWallet.getBalance();
-    expect(contractBalance).to.equal(0);
   });
 
-  it("Checks the balance which is zero", async function () {
+  it("Checks the balance which is 10", async function () {
     const provider = new MockProvider();
     const [wallet] = provider.getWallets();
     const etherWallet = await deployContract(wallet, EtherWalletJSON, []);
-    expect(await etherWallet.getBalance()).to.equal(0);
+
+    await etherWallet.take({ value: ethers.utils.parseUnits("10", "ether") });
+    const contractBalance = ethers.utils.formatEther(
+      await etherWallet.getBalance()
+    );
+    expect(contractBalance).to.equal("10.0");
   });
 });
