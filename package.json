@@ -39,6 +39,8 @@
   "dependencies": {
     "@openzeppelin/contracts": "^4.6.0",
     "base64-sol": "^1.1.0",
-    "hardhat-deploy": "^0.11.5"
+    "chai-bn": "^0.3.1",
+    "hardhat-deploy": "^0.11.5",
+    "mocha-skip-if": "^0.0.3"
   }
 }
